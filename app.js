@@ -1,5 +1,9 @@
 const api = require('./api.js')
-const map = require('rxjs/operator/map').map
-const of = require('rxjs/observable/of').of
+const $ = require('jquery')
 
-console.log(map)
+const user = api.getUsers()
+
+$.each(user, function(index, user) {
+  $(document.body).append("<p>name: " + user.name + "</p>")
+  $(document.body).append("<p>age: " + user.age + "</p>")
+})

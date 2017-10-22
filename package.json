@@ -11,6 +11,7 @@
     "webpack": "webpack ./app.js ./bundle.js"
   },
   "dependencies": {
+    "jquery": "^3.2.1",
     "rxjs": "^5.5.0"
   }
 }
