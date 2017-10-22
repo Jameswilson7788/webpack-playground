@@ -1,0 +1,13 @@
+{
+  "name": "webpack-playground",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "JamesWilson <wesstation2@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "1.14.0"
+  },
+  "scripts": {
+    "webpack": "webpack ./app.js ./bundle.js"
+  }
+}
