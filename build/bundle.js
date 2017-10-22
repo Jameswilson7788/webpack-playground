@@ -47,39 +47,24 @@
 	const api = __webpack_require__(1)
 	const $ = __webpack_require__(2)
 
-	const user = api.getUsers()
-
-	$.each(user, function(index, user) {
-	  $(document.body).append("<p>name: " + user.name + "</p>")
-	  $(document.body).append("<p>age: " + user.age + "</p>")
+	api('USD', function(data) {
+	  console.log(data)
+	  $(document.body).append('<p>' + data.rates.jpy + '</p>')
 	})
 
 
 /***/ },
 /* 1 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = {
-	  getUsers:function() {
-	    return [
-	      {
-	        name:'Weigo',
-	        age: 25,
-	      },
-	      {
-	        name:'Annie',
-	        age: 30
-	      },
-	      {
-	        name:'Penny',
-	        age: 23
-	      },
-	      {
-	        name: 'Bowei',
-	        age: 27
-	      }
-	    ]
-	  }
+	const $ = __webpack_require__(2)
+
+	const baseUrl = 'http://api.fixer.io/latest?base='
+
+	module.exports = function (current, callback) {
+	  $.getJSON(baseUrl + current, function(fixable) {
+	    callback(fixable)
+	  })
 	}
 
 
