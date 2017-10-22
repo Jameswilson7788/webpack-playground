@@ -73,6 +73,10 @@
 	      {
 	        name:'Penny',
 	        age: 23
+	      },
+	      {
+	        name: 'Bowei',
+	        age: 27
 	      }
 	    ]
 	  }
