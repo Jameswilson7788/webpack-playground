@@ -9,5 +9,8 @@
   },
   "scripts": {
     "webpack": "webpack ./app.js ./bundle.js"
+  },
+  "dependencies": {
+    "rxjs": "^5.5.0"
   }
 }
