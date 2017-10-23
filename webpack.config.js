@@ -4,5 +4,14 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js'
+  },
+  module:{
+    loaders:[
+      {
+        test:/\.coffee$/,
+        loader: 'coffee-loader',
+        exclude: /node_modules/
+      }
+    ]
   }
 }

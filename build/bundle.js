@@ -45,12 +45,12 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	const api = __webpack_require__(1)
-	const $ = __webpack_require__(2)
-
+	var coffee = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./hello\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()))
 	api('USD', function(data) {
 	  console.log(data)
-	  $(document.body).append('<p>' + data.rates.jpy + '</p>')
 	})
+
+	coffee('gychen')
 
 
 /***/ },
