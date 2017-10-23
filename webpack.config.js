@@ -6,6 +6,13 @@ module.exports = {
     filename: 'bundle.js'
   },
   module:{
+    preloaders:[
+      {
+        test:/\.js$/,
+        loader: 'eslint-loader',
+        exclude: /node_modules/
+      }
+    ]
     loaders:[
       {
         test:/\.coffee$/,
@@ -15,7 +22,10 @@ module.exports = {
       {
         test:/\.js$/,
         loader: 'babel-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
+        query: {
+          presets:['es2015']
+        }
       }
     ]
   }
