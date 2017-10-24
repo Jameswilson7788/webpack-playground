@@ -12,7 +12,7 @@ module.exports = {
         loader: 'eslint-loader',
         exclude: /node_modules/
       }
-    ]
+    ],
     loaders:[
       {
         test:/\.coffee$/,
@@ -28,5 +28,10 @@ module.exports = {
         }
       }
     ]
+  },
+  devServer: {
+    contentBase: path.resolve(__dirname, 'build'),
+    inline: true,
+    port: 3000
   }
 }
